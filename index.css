@@ -1,0 +1,22 @@
+/* Put your style information here! */
+
+body{
+    margin: 0px;
+}
+
+img{
+    max-width: 400px;
+    max-height: 200px;
+}
+
+.header{
+    height: 300px;
+    margin: 50px;
+    padding: 10px;
+    font-family: cursive;
+    color: darkgreen;
+}
+
+.items{
+    margin: 20px;
+}
