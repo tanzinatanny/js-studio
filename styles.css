@@ -1,0 +1,14 @@
+body{
+    margin-top: 0;
+}
+
+img{
+    max-height: 600px;
+    max-width: 400px;
+    
+}
+
+.header {
+    font-family: 'Times New Roman', Times, serif;
+    color: darkolivegreen;
+}

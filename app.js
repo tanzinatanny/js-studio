@@ -25,7 +25,7 @@ corsPromise().then(
   (request) =>
     (request.onload = request.onerror = function () {
       // TODO: ADD FUNCTION, ETC. FOR WHATEVER YOU WANT TO DO ONCE THE DATA IS RECEIVED
-      processData(request.response)
+      processData(request.response);
     })
 );
 
@@ -33,19 +33,42 @@ corsPromise().then(
 
 const processData = (response) => {
 
-  // var node = document.createElement("div");
-  // var image = document.createElement("img");
-  // image.src = plant.image_url
-  // node.appendChild(image)
-
-
-  const data =  JSON.parse(response).data
+  const data =  JSON.parse(response).data;
 
   const result = data.filter(plant => plant.family = "Fagaceae");
-  console.log(result)
 
-  for (plant of result){
-    console.log(plant.family)
+  console.log(result);
+
+  let html = '';
+
+  for (i of result){
+
+    html += `<div class="p-4 item">
+            <img class="img-fluid " src="${i.image_url}" alt="">
+            <h6>${i.common_name}</h6>
+            <h6></h6>
+          </div>
+    ` 
+
   }
 
+ 
+
+  items = document.getElementsByClassName('gallery')[0].innerHTML = html;
+
+  console.log(items);
+
+
+
+  
+  
+
+
+
+
+  
+
+
 }
+
+
